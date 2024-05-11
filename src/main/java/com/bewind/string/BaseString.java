@@ -15,6 +15,10 @@ public class BaseString {
         testCharAt();
 
         testTrim();
+
+        testConcat();
+
+        testFormat();
     }
 
     // ✅
@@ -54,6 +58,20 @@ public class BaseString {
     public static void testTrim(){
         String str = " d f ";
         System.out.println("去除空格: " + str.trim());
+    }
+
+    // 连接字符串
+    // byte[] buf = newArray(indexCoder); 底层新建一个数组来拼接字符串
+    public static void testConcat() {
+        String s1 = "hello ";
+        String s2 = "world";
+        System.out.println("拼接字符串: " + s1.concat(s2));
+    }
+
+    // 创建格式化字符串
+    public static void testFormat() {
+        String str = String.format("Hi, %s", "Tom");
+        System.out.println(str);
     }
 
 }
